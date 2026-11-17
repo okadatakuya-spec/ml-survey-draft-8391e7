@@ -37,7 +37,7 @@ body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#e9ebf2;l
 .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),#ff8aa4);transition:width .5s}
 .q{padding:26px 14px 6px;animation:up .5s ease both}
 .q-head{display:flex;gap:10px;align-items:flex-start}
-.avatar{flex:none;width:44px;height:44px;border-radius:50%;background:var(--navy2);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.avatar{flex:none;width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 1px 4px rgba(31,42,107,.25)}
 .bubble{background:var(--bg);border-radius:4px 14px 14px 14px;padding:10px 12px;font-weight:700;font-size:16px;color:var(--navy)}
 .bubble small{display:block;font-size:11px;font-weight:500;color:var(--sub)}
 .opts{display:grid;gap:9px;margin-top:14px}
@@ -175,7 +175,7 @@ const TYPES_MORE=`<details class="more"><summary>包茎の3つのタイプを見
 const Q=[
  {id:"q1",key:"悩み",title:"いちばん気になっていることは？",sub:"あてはまるものを1つ選んでください",
   opts:[
-   {v:"見た目",t:"見た目が気になる（温泉・サウナなど人前で）",h:"見た目のお悩みは、よくご相談いただくお悩みのひとつです",b:`<p>人目が気になる場面が多いほど、日常のストレスになりがちです。包茎にはタイプがあり、タイプによって治療の考え方が変わります。</p>${TYPES_MORE}`},
+   {v:"見た目",t:"見た目が気になる（温泉・サウナなど人前で）",h:"見た目のお悩みは、よくご相談いただくお悩みのひとつです",b:`<img class="photo" src="img/q1_looks.jpg" alt="温泉の脱衣所で人目を気にする男性のイラスト"><p>人目が気になる場面が多いほど、日常のストレスになりがちです。包茎にはタイプがあり、タイプによって治療の考え方が変わります。</p>${TYPES_MORE}`},
    {v:"ニオイ・清潔さ",t:"ニオイ・清潔さが気になる",h:"包皮の内側は汚れがたまりやすく、ニオイの原因になることがあります",b:`<div class="ph">画像：清潔感のイメージ（生成・※イメージ）<small>直接的な描写はしない</small></div><p>こまめに洗っても気になる場合、包皮の状態が関係していることがあります。</p>${TYPES_MORE}`},
    {v:"タイプを知りたい",t:"自分がどのタイプなのか知りたい",h:"包茎のタイプは大きく3つに分かれます",b:TYPES},
    {v:"早めに相談したい",t:"将来のために、早めに相談しておきたい",h:"気になった今が、相談を始めるタイミングです",b:`<p>カウンセリングは無料です。まずは今の状態を医師に確認してもらうところから始められます。</p>${TYPES_MORE}`}
@@ -202,7 +202,7 @@ const ans={};let done=0,resultEl=null;
 const flow=document.getElementById("flow");
 function render(i){
  const q=Q[i];const s=document.createElement("section");s.className="q";s.id=q.id;
- s.innerHTML=`<div class="q-head"><div class="avatar">案内<br>スタッフ</div><div class="bubble"><small>Q${i+1}. ${q.key}</small>${q.title}<small>${q.sub}</small></div></div><div class="opts ${q.grid?"grid2":""}">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${o.t}</button>`).join("")}</div><div class="ans-slot"></div>`;
+ s.innerHTML=`<div class="q-head"><img class="avatar" src="img/staff.jpg" alt="案内スタッフ"><div class="bubble"><small>Q${i+1}. ${q.key}</small>${q.title}<small>${q.sub}</small></div></div><div class="opts ${q.grid?"grid2":""}">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${o.t}</button>`).join("")}</div><div class="ans-slot"></div>`;
  flow.appendChild(s);
  s.querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(i,+b.dataset.j,s));
 }
