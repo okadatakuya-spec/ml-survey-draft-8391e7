@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>アンケート型LP 構成案</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1f2a6b;--pink:#e5486a;--bg:#f5f6fa;--line:#dde0ea;--ink:#222;--sub:#666;--warn:#fff6d6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:14px}
+header{background:var(--navy);color:#fff;padding:28px 16px}
+header .in,main{max-width:1180px;margin:0 auto}
+header h1{font-size:24px;font-weight:900}
+header p{opacity:.85;font-size:13px}
+main{display:grid;grid-template-columns:1fr 420px;gap:28px;padding:24px 16px 60px;align-items:start}
+.doc section{background:#fff;border-radius:12px;padding:22px 22px;margin-bottom:18px;border:1px solid var(--line)}
+h2{font-size:18px;color:var(--navy);border-left:5px solid var(--pink);padding-left:10px;margin-bottom:12px}
+h3{font-size:15px;color:var(--navy);margin:14px 0 6px}
+p+p{margin-top:6px}
+ul,ol{padding-left:20px}
+li{margin:3px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{background:#eef0f7;color:var(--navy);white-space:nowrap}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.kpi div{background:var(--bg);border-radius:10px;padding:12px}
+.kpi b{display:block;color:var(--navy);font-size:15px}
+.tag{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:0 6px;margin-right:4px}
+.t-new{background:#ffe1e8;color:#b0244a}.t-old{background:#e1f3e8;color:#16723f}.t-gpt{background:#e6e9fb;color:#2c3a8c}
+.warn{background:var(--warn);border:1px solid #ecd58a;border-radius:8px;padding:10px 12px;margin-top:8px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.flow span{background:var(--navy);color:#fff;border-radius:6px;padding:4px 10px;font-size:12.5px;font-weight:700}
+.flow span.p{background:var(--pink)}
+.flow i{color:var(--sub);font-style:normal}
+.phone{position:sticky;top:16px}
+.phone .frame{border:12px solid #1b1b1f;border-radius:36px;overflow:hidden;height:820px;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0}
+.phone p{font-size:12px;color:var(--sub);text-align:center;margin-top:8px}
+.phone a{color:var(--navy)}
+@media (max-width:900px){main{grid-template-columns:1fr}.phone{position:static}.kpi{grid-template-columns:1fr}.phone .frame{height:720px}}
+</style>
+</head>
+<body>
+<header><div class="in">
+ <p>メンズライフクリニック 包茎治療｜広告用クッションページ</p>
+ <h1>アンケート型LP 構成案（v1）</h1>
+ <p>2026年11月17日　右側（スマホでは下部）のプロトタイプは実際にタップして操作できます</p>
+</div></header>
+<main>
+<div class="doc">
+
+<section>
+ <h2>1. 目的とKPI</h2>
+ <p>TikTok・Meta・Xの広告から流入したユーザーに、4問のアンケートで「悩みを自覚 → 不安を解消 → 料金の案内」と順に進んでもらってから公式LPへ送ります。LPに着いた時点で不安が解けている状態を作り、遷移率とLPのCVRの両方を上げる設計です。</p>
+ <div class="kpi">
+  <div><b>主KPI①：LP遷移率</b>クッション訪問者のうち、公式LPに到着した割合</div>
+  <div><b>主KPI②：LP CVR</b>LP到着者のうち、無料カウンセリング予約を完了した割合</div>
+  <div><b>最終判定：訪問→予約完了率</b>①×②。①と②が逆方向に動いた場合はこの値で判断します</div>
+ </div>
+ <p style="margin-top:10px">例：遷移率40%×CVR5%＝2.0%と、遷移率60%×CVR3%＝1.8%では、遷移率が高い後者のほうが予約数は少なくなります。そのため、広告から直接LPへ送る導線との比較テストも推奨します。</p>
+ <p style="margin-top:6px">遷移先：<a href="https://www.mens-life-clinic.com/lp/houkei_afi22/" target="_blank">https://www.mens-life-clinic.com/lp/houkei_afi22/</a></p>
+</section>
+
+<section>
+ <h2>2. リサーチから導いた設計方針</h2>
+ <p>完成イメージとしていただいた参考ページ1件と、メンズ医療の診断型ページ12件（包茎6・AGA2・ED3・脱毛1）を調査しました。なお、各ページの実際の遷移率・CVRは公開されていないため、以下は構造の比較にもとづく方針です。</p>
+ <table>
+  <tr><th>調査で分かったこと</th><th>本構成での打ち手</th></tr>
+  <tr><td>包茎の診断ページは、実際に答える設問が2〜5問に集中している</td><td>全4問と最初に明示し、答え始めるハードルを下げる</td></tr>
+  <tr><td>参考ページは、回答しても後のコンテンツが変わらない</td><td><b>回答した直後に、その答えに合わせた解説が出現</b>する縦積み形式にする</td></tr>
+  <tr><td>競合の多くは、費用・知られる不安・痛み・恥ずかしさへの答えを、結果のあと（LP側）に置いている</td><td>不安を設問で聞き、<b>その場で答える</b>。LPで離脱する原因を前倒しで潰す</td></tr>
+  <tr><td>医師の顔を出さない競合は、規模の数字・男性スタッフのみ・費用の透明性で信頼を作っている</td><td>実績件数（期間の注記つき）・完全個室・男性スタッフのみ・料金に含まれる項目を明示する</td></tr>
+  <tr><td>体験談・他院比較・断定表現・費用の過度な強調は、医療広告ガイドライン上のリスクがある</td><td>すべて不使用。料金は「適用条件とセット」で示す（§8）</td></tr>
+ </table>
+</section>
+
+<section>
+ <h2>3. ページ全体の流れ</h2>
+ <div class="flow"><span>FV</span><i>→</i><span>Q1 悩み</span><i>→</i><span>解説</span><i>→</i><span>Q2 不安</span><i>→</i><span>不安への回答</span><i>→</i><span>Q3 エリア</span><i>→</i><span>近くの院</span><i>→</i><span>Q4 時期</span><i>→</i><span>治療の流れ</span><i>→</i><span class="p">料金のご案内 → LPへ</span></div>
+ <p style="margin-top:10px">同じURLのまま、下へ伸びていく形式です。最初に表示されるのはFVとQ1だけで、回答するたびに「回答に合わせた解説」と「次の設問」が順番に出てきます。</p>
+ <table>
+  <tr><th>ブロック</th><th>目的</th><th>内容</th></tr>
+  <tr><td>広告表記・FV</td><td>何のページかを1秒で伝え、回答を始めてもらう</td><td>「広告｜[PR]」の明記／「包茎治療の不安を解消して、キャンペーン価格で」／全4問／信頼バッジ3つ／「アンケート回答で特別キャンペーン価格をご案内！さらにお近くの院をご案内します」／開始ボタン</td></tr>
+  <tr><td>Q1 悩み</td><td>悩みを自覚してもらう</td><td>回答別の見出しと本文。包茎の3タイプ解説は「自分のタイプを知りたい」を選んだ人には全文を表示し、それ以外の人には開閉式で表示</td></tr>
+  <tr><td>Q2 不安</td><td>LPで離脱する原因を先に解消する</td><td>選んだ不安への答えを前面に表示。残り4つの不安への答えは「ほかの不安への答えも見る」で開閉。費用を選んだ人には、この時点で料金と適用条件を提示</td></tr>
+  <tr><td>Q3 エリア</td><td>「近くに院があるのか」という障壁をなくす</td><td>選んだエリアの院名一覧（開院予定の院は日付つき）</td></tr>
+  <tr><td>Q4 時期</td><td>次の一歩を具体的にする</td><td>回答別の見出しと治療の流れ5ステップ。当日価格の条件はここで先に開示</td></tr>
+  <tr><td>結果・料金のご案内</td><td>回答してくれたお礼として料金を案内し、LPへ送る</td><td>回答のまとめ（4問分）→ 料金カード（当日価格と当日以外の価格を併記）→ CTA「料金・治療内容を公式サイトで確認」</td></tr>
+  <tr><td>注意事項・フッター</td><td>限定解除要件を満たす</td><td>医療機関名・問い合わせ先・自由診療・費用・リスク・副作用・治療内容・術後の注意・「診断ではありません」・画像はイメージ</td></tr>
+ </table>
+</section>
+
+<section>
+ <h2>4. 設問設計</h2>
+ <table>
+  <tr><th>設問</th><th>選択肢</th><th>回答後に出る内容</th></tr>
+  <tr><td>Q1<br>いちばん気になっていることは？</td><td>見た目／ニオイ・清潔さ／自分のタイプを知りたい／将来のために早めに相談したい</td><td>回答別の見出しと本文＋3タイプ解説（「無理にむかない」の注意つき）</td></tr>
+  <tr><td>Q2<br>治療について、いちばん不安なことは？</td><td>痛み／費用／周りに知られる／相談が恥ずかしい／術後の生活</td><td>痛み：麻酔をしてから施術・約20〜30分<br>費用：当日45,000円・当日以外99,000円（税込）、料金に含まれる項目と別料金の項目、医療ローン月々3,000円〜<br>知られる：日帰り・抜糸の通院不要・手作業で施術<br>恥ずかしさ：男性スタッフのみ・完全個室・完全予約制<br>術後：日帰り・抜糸の通院不要・性交渉は約4週間控える</td></tr>
+  <tr><td>Q3<br>お住まいのエリアは？</td><td>8エリア（公式LPの区分と同じ）</td><td>エリア内の院名（公式LP掲載の自院のみ。提携院は掲載可否を確認後に追加）</td></tr>
+  <tr><td>Q4<br>治療を考えている時期は？</td><td>今月中／1〜3ヶ月以内／未定・まず話を聞きたい</td><td>回答別の見出し＋治療の流れ＋当日価格の条件</td></tr>
+ </table>
+ <p style="margin-top:8px">設問の順番は「答えやすい悩み → 本音の不安 → 事務的なエリア → 行動の意思」です。後半ほど答える負担を軽くして、終盤での離脱を抑えます。性生活に関する選択肢や画像は、媒体審査（リンク先も審査対象）を考えて入れていません。</p>
+</section>
+
+<section>
+ <h2>5. ギミック（演出）</h2>
+ <ul>
+  <li><b>縦に伸びる出現演出</b>：回答すると解説がふわっと現れ、自動でスクロールします（解説の頭で止まり、読み飛ばしを防ぎます）</li>
+  <li><b>上部固定の進捗バー</b>：回答した数に応じて進みます</li>
+  <li><b>チャット風の設問</b>：案内スタッフ（イラスト）の吹き出しで問いかけます。医師の顔は使いません</li>
+  <li><b>下部固定ボタン</b>：FVを過ぎると表示されます。回答中は「残りN問」を表示してタップで現在の設問へ移動し、回答完了後は「公式サイトで確認」に切り替わります</li>
+  <li><b>回答の修正に対応</b>：回答を変えると、解説と結果のまとめがその場で更新されます</li>
+  <li><b>料金カードの出現演出</b>：回答のまとめに続いて、料金カードが現れます</li>
+ </ul>
+ <p class="warn">次の3つは、景品表示法と医療広告ガイドラインのリスクがあるため入れていません。<br>・カウントダウンや「残り○名」の表示<br>・「回答内容を確認中」のような、実際には行っていない審査を装う演出<br>・「回答者限定の特典」という表現（実際は誰でも適用される価格のため）</p>
+</section>
+
+<section>
+ <h2>6. 医師の顔出しNGへの対応</h2>
+ <ul>
+  <li>FV：ご支給いただいた院内の実写（受付・ロゴ）。人物は写りません</li>
+  <li>「相談が恥ずかしい」への回答：医師役が<b>背中向き</b>で写っているカウンセリングの実写を使用し、顔は出しません</li>
+  <li>案内役：イラストの「案内スタッフ」で、実在の医師を想起させないデザインにします</li>
+  <li>信頼の担保：治療実績14万件以上（期間の注記つき）・完全個室・男性スタッフのみ・料金に含まれる項目を、数字と事実で示します</li>
+ </ul>
+ <p class="warn">【確認】公式LPのFVに白衣の男性の写真が使われています。医師ご本人かモデルかによって、当ページで流用できるかが変わります。</p>
+</section>
+
+<section>
+ <h2>7. 素材計画</h2>
+ <table>
+  <tr><th>素材</th><th>調達</th><th>備考</th></tr>
+  <tr><td>FVキービジュアル</td><td><span class="tag t-old">既存</span></td><td>院内の実写（受付）を使用（プロトタイプに反映済み）。本制作では、コピーを焼き込んだFV画像に仕上げます</td></tr>
+  <tr><td>不安への回答写真（処置室・個室カウンセリング）／エリア別の院の写真（新宿・大宮・名古屋・梅田）</td><td><span class="tag t-old">既存</span></td><td>ご支給の実写を使用（反映済み）。写真がないエリアは院名の一覧のみ</td></tr>
+  <tr><td>動画素材の静止画</td><td><span class="tag t-old">既存</span></td><td>必要に応じて、受付役・カウンセリング役の場面を静止画で使います。医師役の顔が写る場面は使いません。メンズライフ様の案件に限って使用し、不要な映り込みはカットします</td></tr>
+  <tr><td>包茎3タイプの図</td><td><span class="tag t-gpt">生成</span></td><td>直接的な描写は避け、記号的なアイコン調にする</td></tr>
+  <tr><td>イメージ画像（清潔感など、実写がない箇所）</td><td><span class="tag t-gpt">生成</span></td><td>「※イメージ」と表記。院内や設備は生成せず、実写だけを使う</td></tr>
+  <tr><td>案内スタッフのイラスト</td><td><span class="tag t-gpt">生成</span></td><td>1キャラクターを全設問で使い回す</td></tr>
+  <tr><td>院一覧・料金・実績数値</td><td><span class="tag t-old">既存</span></td><td>公式LPの掲載内容から転記（§8の確認事項あり）</td></tr>
+ </table>
+ <p style="margin-top:8px">プロトタイプ内の斜線ボックスは、画像を差し込む位置です。構成をご了承いただいてから制作します。</p>
+</section>
+
+<section>
+ <h2>8. レギュレーション対応と確認事項</h2>
+ <h3>構成に反映済み（公開前に、ご支給情報で確定させます）</h3>
+ <ul>
+  <li>「広告｜[PR]」表記、自由診療の明記、税込価格、保険診療の対象となる場合がある旨の注記（料金のすぐ近くにも配置）</li>
+  <li>料金は「当日治療45,000円／当日以外99,000円」の条件ごとに併記。割引率のバッジは使わない</li>
+  <li>料金に含まれる項目と別料金の項目を分けて表示（「すべて込み」とは書かない）</li>
+  <li>体験談・ビフォーアフター写真・他院比較・断定表現（痛くない／バレない）・根拠のない「多い」を不使用</li>
+  <li>実績数値の期間注記、「本アンケートは医学的な診断ではありません」、「画像はイメージです」</li>
+  <li><b>回答内容を遷移先URLや広告媒体のタグに渡さない設計</b>（包茎の悩みは健康情報にあたるため。媒体へ送るのは「開始・完了・クリック」だけ）</li>
+ </ul>
+ <h3>公式LPには載っているが、当ページでは扱わないもの</h3>
+ <table>
+  <tr><th>項目</th><th>理由</th></tr>
+  <tr><td>長時間作用型麻酔の製品名・作用時間</td><td>国内未承認の医薬品である場合、未承認医薬品に関する追加表示が必要になるため。「術後の痛みに対する麻酔（別途費用）」とだけ記載します</td></tr>
+  <tr><td>院数（全国49院）</td><td>公式LPの中で表記が3通りに分かれているため（下記①）。確定するまでは信頼バッジに使いません</td></tr>
+  <tr><td>器具を使う術式との比較</td><td>比較優良広告にあたるおそれがあるため</td></tr>
+ </table>
+ <h3>ご判断いただきたい点</h3>
+ <p class="warn"><b>料金の見せ方の強さ</b>：本構成では「回答のお礼に料金を案内する」形にし、99,000円→45,000円を条件と並べて示しています。公式LPと同じように「55%OFF」を大きく打ち出す見せ方にすると、遷移率は上がる可能性があります。一方で、医療広告ガイドラインの「費用を強調した広告」にあたるリスクと、媒体審査のリスクが上がります。どこまで強めるかは、クリニック様の方針に合わせて調整します。<br>※99,000円→45,000円の割引率は約54.5%で、厳密には55%ではありません。</p>
+ <p class="warn"><b>亀頭増大の無料キャンペーン（料金カードに掲載）</b>：ユーザーにとって分かりやすい後押しになるため、料金カードに入れています。掲載にあたり、次の3点で手当てしています。<br>・「今なら」は使わず、「キャンペーン期間中は」と表記<br>・亀頭増大の施術内容・費用・リスクを、注意事項に個別に掲載する枠を用意<br>・1行の設定でON/OFFを切り替えられる実装<br>なお、男性器の増大に関わる表示は、TikTok・Metaの審査で<b>リンク先も含めて否認されやすい要素</b>です。否認された場合は、この表示を外した版にすぐ切り替えます。媒体別に、ON版（例：X）とOFF版（例：TikTok・Meta）を使い分ける運用もできます。</p>
+ <h3>ご確認・ご支給をお願いしたい事項</h3>
+ <ol>
+  <li><b>院数</b>：公式LPのFVは「全国49院」、本文は「全国40院」、院一覧は自院38院（開院予定2院を含む）＋提携院7院です。正しい数字・時点・提携院を含むかどうかをご指示ください</li>
+  <li><b>医療機関名・開設者・問い合わせ先の電話番号</b>（限定解除要件として必須）</li>
+  <li><b>主なリスク・副作用、治療内容・ダウンタイムの正式表記</b>（限定解除要件として必須）</li>
+  <li><b>二重価格の根拠</b>：99,000円での販売実績と期間、キャンペーン期間</li>
+  <li><b>別途費用の金額</b>（術後の痛みに対する麻酔）、その他の術式の価格表</li>
+  <li><b>亀頭増大</b>：無料の適用条件（包茎治療と同日に限るか等）と期間、施術内容・使用する製剤（国内承認の有無）・リスク・副作用</li>
+  <li><b>医療ローンの条件</b>：実質年率・支払回数・支払総額（割賦販売法上、月額を出す場合は必須。月額を出さない場合は不要）</li>
+  <li>当日治療ができなかった場合（空きがない等）の価格の扱い</li>
+  <li>「全国の院でアフターケア」の対象範囲（提携院を含むか）</li>
+  <li>公式LPのFVに写っている白衣男性の素材区分（医師ご本人／モデル）と流用の可否、院内写真のご支給</li>
+  <li>計測タグ（GTM・各媒体のピクセル）とCV計測のポイント、設置先のディレクトリ、運営者情報・プライバシーポリシーのURL</li>
+ </ol>
+ <p class="warn">TikTok・Meta・Xは、性の健康に関わる広告の審査が厳しく、リンク先のページも審査対象です。本構成では、性生活を想起させる選択肢や画像、増大系の施術を外しています。そのうえで、配信前に各媒体の最新ポリシーと年齢ターゲティングの要件をご確認ください。</p>
+</section>
+
+<section>
+ <h2>9. 計測設計（案）</h2>
+ <table>
+  <tr><th>イベント</th><th>発火タイミング</th><th>送り先</th></tr>
+  <tr><td>survey_start</td><td>開始ボタンのタップ</td><td>GA4／各媒体</td></tr>
+  <tr><td>survey_answer</td><td>各設問への初回回答（設問番号のみ）</td><td>GA4のみ</td></tr>
+  <tr><td>survey_complete</td><td>4問目の回答（料金案内の表示）</td><td>GA4／各媒体</td></tr>
+  <tr><td>survey_cta_click</td><td>公式サイトへのボタンのタップ（結果内／下部固定）</td><td>GA4／各媒体</td></tr>
+  <tr><td>LP到着・予約完了</td><td>遷移先LPとフォーム完了ページ（?src=survey で流入元を識別）</td><td>LP側の既存計測</td></tr>
+ </table>
+ <p style="margin-top:8px">回答の中身（どの不安が多いか）は、健康情報として扱います。広告媒体には送らず、自社で管理する集計（GA4のカスタムディメンションや、サーバー側の集計など）だけで分析する方針をご提案します。</p>
+</section>
+
+<section>
+ <h2>10. 今後の進め方</h2>
+ <ol>
+  <li>本構成案へのフィードバック、§8の確認事項へのご回答・ご支給</li>
+  <li>画像素材の制作（生成 → 品質チェック）とテキストの確定</li>
+  <li>HTML一式の制作 → テスト環境でご確認</li>
+  <li>修正 → 納品（HTML・CSS・画像一式）</li>
+ </ol>
+ <p style="margin-top:8px">配信開始後のABテスト案：①広告から直接LP vs 本ページ ②4問版 vs 2問版（悩み＋不安のみ） ③Q2の回答分布に合わせて設問の順番を入れ替える</p>
+</section>
+
+</div>
+
+<aside class="phone">
+ <div class="frame"><iframe src="prototype.html" title="プロトタイプ"></iframe></div>
+ <p>操作できるプロトタイプ（画像は仮置き）　<a href="prototype.html" target="_blank">別タブで開く</a></p>
+</aside>
+</main>
+</body>
+</html>

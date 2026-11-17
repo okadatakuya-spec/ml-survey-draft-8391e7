@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>包茎治療に関するアンケート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1f2a6b;--navy2:#2c3a8c;--pink:#e5486a;--pink2:#c8325a;--yellow:#ffe45c;--bg:#f4f5f9;--ink:#222;--sub:#666;--line:#dde0ea;--green:#18a058}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#e9ebf2;line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;padding-bottom:96px;overflow:hidden}
+.pr{font-size:12px;color:#444;padding:6px 12px;background:#fff;font-weight:500}
+.ph{background:repeating-linear-gradient(45deg,#eceef5,#eceef5 10px,#e3e6f0 10px,#e3e6f0 20px);border:1.5px dashed #9aa1bf;color:#4a5280;font-size:12px;font-weight:700;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;border-radius:8px}
+.ph small{display:block;font-weight:400;color:#6b7299;margin-top:4px}
+.fv{position:relative;background:linear-gradient(160deg,#eef1fb,#dfe5f7);padding:0 0 18px}
+.fv .ph{height:210px;border-radius:0;border-left:0;border-right:0}
+.fv-img{display:block;width:100%;height:220px;object-fit:cover}
+.photo{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;margin:10px 0}
+.glans{background:#fff8e1 !important;border:1px solid #f0d27a}
+.fv-copy{padding:16px 16px 0;text-align:center}
+.fv-tag{display:inline-block;background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:4px 14px;border-radius:999px}
+.fv h1{font-size:25px;font-weight:900;color:var(--navy);line-height:1.35;margin:10px 0 6px}
+.fv h1 em{font-style:normal;color:var(--pink)}
+.fv-lead{font-size:13px;color:#333}
+.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 12px 4px}
+.badge{background:#fff;border:2px solid #c9a646;border-radius:10px;text-align:center;padding:8px 4px;font-weight:900;color:var(--navy);font-size:12px;line-height:1.3;display:flex;flex-direction:column;justify-content:center}
+.badge b{display:block;font-size:18px;color:#b08a1e}
+.note{font-size:10.5px;color:var(--sub);line-height:1.55;padding:0 14px}
+.gift{margin:14px 12px 0;background:var(--yellow);border-radius:12px;padding:12px;text-align:center;font-weight:900;color:var(--navy);font-size:15px;line-height:1.45;box-shadow:0 3px 0 #e2c53a}
+.gift span{color:var(--pink2)}
+.start{display:block;margin:14px 16px 0;padding:14px;background:var(--pink);color:#fff;text-align:center;font-weight:900;font-size:17px;border-radius:999px;text-decoration:none;box-shadow:0 4px 0 var(--pink2)}
+.progress{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:8px 14px;display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;color:var(--navy)}
+.bar{flex:1;height:8px;background:#e6e8f0;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),#ff8aa4);transition:width .5s}
+.q{padding:26px 14px 6px;animation:up .5s ease both}
+.q-head{display:flex;gap:10px;align-items:flex-start}
+.avatar{flex:none;width:44px;height:44px;border-radius:50%;background:var(--navy2);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.bubble{background:var(--bg);border-radius:4px 14px 14px 14px;padding:10px 12px;font-weight:700;font-size:16px;color:var(--navy)}
+.bubble small{display:block;font-size:11px;font-weight:500;color:var(--sub)}
+.opts{display:grid;gap:9px;margin-top:14px}
+.opt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:12px;padding:13px 12px;font:inherit;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;transition:.15s}
+.opt::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;border:2px solid #b7bdd3}
+.opt.on{border-color:var(--pink);background:#fff3f6;font-weight:700}
+.opt.on::before{border:6px solid var(--pink)}
+.opts.grid2{grid-template-columns:1fr 1fr}
+.opts.grid2 .opt{font-size:14px;padding:12px 8px}
+.ans{margin:14px 0 0;animation:up .5s ease both}
+.ans-card{border-radius:14px;background:linear-gradient(180deg,#f2f4fb,#fff);border:1px solid var(--line);padding:16px 14px}
+.ans-kicker{font-size:12px;font-weight:700;color:var(--pink2)}
+.ans-card h3{font-size:18px;color:var(--navy);line-height:1.45;margin:2px 0 10px}
+.ans-card p{font-size:14px}
+.ans-card .ph{height:170px;margin:10px 0}
+.pts{list-style:none;display:grid;gap:8px;margin-top:10px}
+.pts li{background:#fff;border-radius:10px;padding:10px 12px 10px 36px;position:relative;font-size:14px;border:1px solid var(--line)}
+.pts li::before{content:"✓";position:absolute;left:12px;top:11px;color:#fff;background:var(--green);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:900}
+.pts li b{color:var(--navy)}
+.pts li.x::before{content:"!";background:#b08a1e}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.type{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center;font-size:11.5px;line-height:1.45}
+.type .ph{height:64px;margin:0 0 6px;font-size:10px;padding:4px}
+.type b{display:block;color:var(--navy);font-size:13px}
+.more{margin-top:10px}
+.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--navy2);padding:8px 0;list-style:none}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"＋ "}
+.more[open] summary::before{content:"－ "}
+.clinics{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.clinics span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:13px}
+.flow-ttl{margin-top:4px;font-size:15px;font-weight:900;color:var(--navy);display:flex;align-items:center;gap:8px}
+.flow-ttl::before,.flow-ttl::after{content:"";flex:1;height:1px;background:var(--line)}
+.steps{counter-reset:s;display:grid;gap:8px;margin-top:10px}
+.steps div{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px 9px 62px;position:relative;font-size:13.5px}
+.steps div::before{content:"STEP" counter(s);position:absolute;left:8px;top:11px;font-size:10px;font-weight:900;color:#fff;background:var(--navy);border-radius:4px;padding:1px 4px}
+.result{padding:24px 14px 8px;animation:up .6s ease both}
+.thanks{text-align:center;font-weight:900;font-size:20px;color:var(--navy);line-height:1.4}
+.summary{margin:14px 0;background:var(--bg);border-radius:12px;padding:12px 14px;font-size:13.5px}
+.summary dt{font-size:11px;color:var(--sub);font-weight:700}
+.summary dd{font-weight:700;color:var(--navy);margin-bottom:6px}
+.summary dd:last-child{margin-bottom:0}
+.offer{border:3px solid var(--pink);border-radius:16px;overflow:hidden;background:#fff;animation:up .7s .3s ease both}
+.offer-head{background:var(--pink);color:#fff;text-align:center;font-weight:900;padding:8px;font-size:15px}
+.offer-body{padding:14px;text-align:center}
+.menu{font-size:14px;font-weight:700;color:var(--navy)}
+.menu small{display:block;font-weight:500;color:var(--sub);font-size:11.5px}
+.price{display:flex;align-items:baseline;justify-content:center;gap:6px;margin:6px 0 2px;flex-wrap:wrap}
+.price s{color:#888;font-size:15px;font-weight:700;white-space:nowrap}
+.price strong{font-size:38px;font-weight:900;color:var(--pink2);line-height:1.1;white-space:nowrap}
+.price strong small{font-size:15px}
+.price-cond{font-size:12.5px;font-weight:700;color:var(--navy)}
+.plus{margin-top:10px;display:grid;gap:6px;text-align:left}
+.plus div{background:var(--bg);border-radius:8px;padding:8px 10px;font-size:13px;display:flex;gap:6px}
+.plus b{color:var(--pink2)}
+.cond{margin-top:10px;font-size:11px;color:var(--sub);text-align:left;line-height:1.6}
+.cta{display:block;margin:16px 0 6px;padding:15px 10px;background:linear-gradient(180deg,#22b46a,var(--green));color:#fff;text-align:center;font-weight:900;font-size:17px;border-radius:999px;text-decoration:none;box-shadow:0 4px 0 #0e7a41;line-height:1.35;animation:pulse 2s infinite}
+.cta small{display:block;font-size:11.5px;font-weight:500}
+.reassure{font-size:12px;text-align:center;color:#444}
+.todo{background:#fff6d6;border:1px dashed #d9b800;padding:6px 8px;border-radius:6px;color:#6b5a00;font-size:11px;margin-top:6px}
+.legal{margin:26px 0 0;background:var(--bg);padding:16px 14px;font-size:11px;color:#555;line-height:1.7}
+.legal h4{font-size:12px;color:var(--navy);margin:8px 0 2px}
+footer{text-align:center;font-size:11px;color:var(--sub);padding:14px}
+footer a{color:var(--sub);margin:0 8px}
+.sticky{position:fixed;left:50%;transform:translate(-50%,110%);bottom:0;width:100%;max-width:480px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);z-index:30;transition:transform .3s}
+.sticky.show{transform:translate(-50%,0)}
+.sticky a{display:block;text-align:center;text-decoration:none;font-weight:900;font-size:15px;color:#fff;background:var(--pink);border-radius:999px;padding:12px;box-shadow:0 3px 0 var(--pink2)}
+.sticky.done a{background:var(--green);box-shadow:0 3px 0 #0e7a41}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="pr">広告｜[PR] メンズライフクリニック</div>
+
+  <section class="fv" id="fv">
+    <img class="fv-img" src="img/fv_reception.jpg" alt="メンズライフクリニックの受付">
+    <div class="fv-copy">
+      <span class="fv-tag">アンケートのお願い｜全4問</span>
+      <h1>包茎治療の<em>不安</em>を解消して、<br><em>キャンペーン価格</em>で</h1>
+    </div>
+    <div class="badges">
+      <div class="badge">治療実績<b>14万件</b>以上※1</div>
+      <div class="badge">相談は<b>完全個室</b></div>
+      <div class="badge">スタッフは<b>男性のみ</b></div>
+    </div>
+    <p class="note">※1 治療実績145,791件（2010年7月1日〜2026年8月31日累計）　※自由診療</p>
+    <div class="gift">アンケート回答で<br><span>特別キャンペーン価格</span>をご案内！<br>さらにお近くの院をご案内します</div>
+    <a href="#q1" class="start" id="startBtn">アンケートに答える（無料）</a>
+  </section>
+
+  <div class="progress"><span id="pLabel">Q1 / 4</span><div class="bar"><i id="pBar"></i></div></div>
+
+  <div id="flow"></div>
+
+  <div class="legal">
+    <h4>医療機関・お問い合わせ</h4>
+    <p class="todo">【要ご支給】医療機関名・開設者（法人名）・電話番号・受付時間</p>
+    <h4>治療内容・費用</h4>
+    <p>包茎治療は公的保険の適用外の自由診療です（真性包茎・カントン包茎は保険診療の対象となる場合があります）。スタンダードカット：当日治療の場合45,000円（税込）／当日以外の場合99,000円（税込）。余分な包皮を切除し縫合する手術で、施術時間は約20〜30分、日帰りです。</p>
+    <p class="todo">【要ご支給】その他の術式・オプションの費用（価格表へのリンク可）、術後の痛みに対する麻酔の費用、医療ローンの実質年率・支払総額、キャンペーン期間</p>
+    <div id="glansLegal"><h4>亀頭増大（タイプH1）について</h4>
+    <p class="todo">【要ご支給】施術内容・使用する製剤（国内承認の有無、未承認の場合は入手経路・国内承認品の有無・安全性情報）・通常費用・主なリスク・副作用・無料の適用条件と期間</p></div>
+    <h4>主なリスク・副作用</h4>
+    <p class="todo">【要ご支給】クリニック様の正式なリスク・副作用表記</p>
+    <h4>治療期間・術後の注意</h4>
+    <p>吸収される糸を使用するため、抜糸のための再来院は不要です。術後の性交渉は約4週間控えていただく必要があります。</p>
+    <p class="todo">【要ご支給】ダウンタイム・入浴・運動再開時期などの正式表記</p>
+    <p style="margin-top:8px">※本アンケートは医学的な診断ではありません。治療の要否は、カウンセリング時に医師が判断します。※画像はイメージです。※回答内容は個人を特定する目的では使用しません。</p>
+  </div>
+  <footer><a href="#">運営者情報</a><a href="#">プライバシーポリシー</a><br><span class="todo" style="display:inline-block">【要ご支給】リンク先URL</span></footer>
+</div>
+
+<div class="sticky" id="sticky"><a href="#q1" id="stickyBtn">アンケートに答える（残り4問）</a></div>
+
+<script>
+const LP="https://www.mens-life-clinic.com/lp/houkei_afi22/?src=survey";
+const CLINICS={
+ "北海道・東北":["札幌院","仙台院","秋田院","福島院","郡山院"],
+ "東京":["池袋院","上野院","新宿院","渋谷院","錦糸町院","立川院"],
+ "関東（東京以外）":["宇都宮院","高崎院","大宮院","柏院","横浜院","水戸院（12月13日開院予定）"],
+ "北陸・甲信越":["新潟院","金沢院","長野院"],
+ "中部":["岐阜院","静岡院","浜松院","名古屋院"],
+ "近畿":["京都院","梅田院","西梅田院","難波院","三宮院","奈良院"],
+ "中国・四国":["岡山院","八丁堀院","高松院","松山院"],
+ "九州・沖縄":["福岡院","熊本院","鹿児島院","沖縄院","小倉院（12月12日開院予定）"]
+};
+const SHOW_GLANS=true;
+const AREA_IMG={"東京":["c_tokyo.jpg","新宿院"],"関東（東京以外）":["c_kanto.jpg","大宮院"],"中部":["c_chubu.jpg","名古屋院"],"近畿":["c_kinki.jpg","梅田院"]};
+const TYPES=`<div class="types">
+ <div class="type"><div class="ph">図：仮性<small>アイコン調</small></div><b>仮性包茎</b>手でむくことができる</div>
+ <div class="type"><div class="ph">図：カントン<small>アイコン調</small></div><b>カントン包茎</b>むくと締め付けられ、戻りにくいことがある</div>
+ <div class="type"><div class="ph">図：真性<small>アイコン調</small></div><b>真性包茎</b>手でむくことができない</div></div>
+ <p class="note" style="padding:6px 0 0">※目安です。無理にむかないでください。むいた皮が戻らない場合は、速やかに医療機関を受診してください。タイプの判断はカウンセリング時に医師が行います。真性・カントン包茎は保険診療の対象となる場合があります。</p>`;
+const TYPES_MORE=`<details class="more"><summary>包茎の3つのタイプを見る</summary>${TYPES}</details>`;
+const Q=[
+ {id:"q1",key:"悩み",title:"いちばん気になっていることは？",sub:"あてはまるものを1つ選んでください",
+  opts:[
+   {v:"見た目",t:"見た目が気になる（温泉・サウナなど人前で）",h:"見た目のお悩みは、よくご相談いただくお悩みのひとつです",b:`<p>人目が気になる場面が多いほど、日常のストレスになりがちです。包茎にはタイプがあり、タイプによって治療の考え方が変わります。</p>${TYPES_MORE}`},
+   {v:"ニオイ・清潔さ",t:"ニオイ・清潔さが気になる",h:"包皮の内側は汚れがたまりやすく、ニオイの原因になることがあります",b:`<div class="ph">画像：清潔感のイメージ（生成・※イメージ）<small>直接的な描写はしない</small></div><p>こまめに洗っても気になる場合、包皮の状態が関係していることがあります。</p>${TYPES_MORE}`},
+   {v:"タイプを知りたい",t:"自分がどのタイプなのか知りたい",h:"包茎のタイプは大きく3つに分かれます",b:TYPES},
+   {v:"早めに相談したい",t:"将来のために、早めに相談しておきたい",h:"気になった今が、相談を始めるタイミングです",b:`<p>カウンセリングは無料です。まずは今の状態を医師に確認してもらうところから始められます。</p>${TYPES_MORE}`}
+  ]},
+ {id:"q2",key:"不安",title:"治療について、いちばん不安なことは？",sub:"不安への答えをすぐにお見せします",
+  opts:[
+   {v:"痛み",t:"痛みが不安",h:"麻酔を使い、痛みに配慮して施術します",b:`<img class="photo" src="img/room_treat.jpg" alt="処置室"><ul class="pts"><li>施術は<b>麻酔をしてから</b>行います</li><li>施術時間は<b>約20〜30分</b>、入院不要の日帰り</li><li>術後の痛みが心配な方向けの麻酔もご相談いただけます<b>（別途費用）</b></li></ul><p class="note" style="padding:6px 0 0">※痛みの感じ方には個人差があります</p>`},
+   {v:"費用",t:"費用が高くならないか不安",h:"料金に含まれるものを、先にお伝えします",b:`<ul class="pts"><li><b>スタンダードカット：当日治療の場合45,000円（税込）</b>／当日以外99,000円（税込）</li><li>料金に含まれるもの：<b>初診料・診察料・麻酔代・内服薬代・アフターケア</b></li><li class="x">別途費用：<b>術後の痛みに対する麻酔</b>（ご希望の方のみ）</li><li>医療ローンなら<b>月々3,000円〜</b>（スタンダードカット・15回払いの場合）</li></ul><p class="todo">【要ご支給】別途費用の金額、医療ローンの実質年率・支払総額</p>`},
+   {v:"周りに知られる",t:"治療したことを周りに知られたくない",h:"日帰り・抜糸の再来院不要で、通院の負担を抑えた手術です",b:`<ul class="pts"><li>入院不要の<b>日帰り</b>手術</li><li>体内に吸収される糸を使うため<b>抜糸のための再来院は不要</b></li><li>仕上がりに配慮し、<b>一人ひとりの形に合わせて手作業で施術</b></li></ul><p class="note" style="padding:6px 0 0">※仕上がりには個人差があります</p>`},
+   {v:"恥ずかしさ",t:"相談するのが恥ずかしい",h:"男性スタッフのみ・完全個室なので、落ち着いて相談できます",b:`<img class="photo" src="img/room_counsel.jpg" alt="個室でのカウンセリングの様子"><ul class="pts"><li>対応するのは<b>男性スタッフのみ</b></li><li>カウンセリングは<b>完全個室</b></li><li><b>完全予約制</b></li></ul>`},
+   {v:"術後の生活",t:"術後の生活（仕事・運動など）が不安",h:"日帰りで、抜糸のための再来院もありません",b:`<ul class="pts"><li>施術は<b>約20〜30分</b>、入院不要</li><li>吸収される糸を使うため<b>抜糸の通院は不要</b></li><li class="x">術後の性交渉は<b>約4週間</b>控えていただく必要があります</li></ul><p class="note" style="padding:6px 0 0">※入浴・運動などの再開時期は、カウンセリング時にご説明します</p>`}
+  ],more:true},
+ {id:"q3",key:"エリア",title:"お住まいのエリアは？",sub:"お近くの院をご案内します",grid:true,
+  opts:Object.keys(CLINICS).map(k=>({v:k,t:k,h:`${k}エリアのクリニック`,b:`${AREA_IMG[k]?`<img class="photo" src="img/${AREA_IMG[k][0]}" alt="${AREA_IMG[k][1]}"><p class="note" style="padding:0 0 4px">写真：${AREA_IMG[k][1]}</p>`:""}<div class="clinics">${CLINICS[k].map(c=>`<span>${c}</span>`).join("")}</div><p style="margin-top:10px">アフターケアは料金に含まれています。遠方の方もご相談ください。</p>`}))},
+ {id:"q4",key:"時期",title:"治療を考えている時期は？",sub:"これで最後の質問です",
+  opts:[
+   {v:"今月中",t:"できるだけ早く（今月中）",h:"カウンセリング当日の治療にも対応しています"},
+   {v:"1〜3ヶ月以内",t:"1〜3ヶ月以内",h:"ご都合に合わせて治療日を決められます"},
+   {v:"未定",t:"未定・まずは話を聞いてみたい",h:"まずは無料カウンセリングでご相談いただけます"}
+  ]}
+];
+const FLOW=`<p class="flow-ttl">施術の流れ</p><div class="steps"><div>無料カウンセリングを予約</div><div>個室で医師が診察・ご説明</div><div>ご希望の日程で治療（約20〜30分）</div><div>日帰りで帰宅・抜糸のための再来院は不要</div><div>アフターケア（料金に含まれます）</div></div><p class="note" style="padding:6px 0 0">※キャンペーン価格（45,000円）は当日治療の場合のみ適用されます。当日以外の場合は99,000円（税込）です。</p>`;
+const ans={};let done=0,resultEl=null;
+const flow=document.getElementById("flow");
+function render(i){
+ const q=Q[i];const s=document.createElement("section");s.className="q";s.id=q.id;
+ s.innerHTML=`<div class="q-head"><div class="avatar">案内<br>スタッフ</div><div class="bubble"><small>Q${i+1}. ${q.key}</small>${q.title}<small>${q.sub}</small></div></div><div class="opts ${q.grid?"grid2":""}">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${o.t}</button>`).join("")}</div><div class="ans-slot"></div>`;
+ flow.appendChild(s);
+ s.querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(i,+b.dataset.j,s));
+}
+function pick(i,j,s){
+ const q=Q[i],o=q.opts[j];const first=!(q.id in ans);ans[q.id]=o.v;
+ s.querySelectorAll(".opt").forEach(b=>b.classList.toggle("on",+b.dataset.j===j));
+ let body=q.id==="q4"?FLOW:o.b;
+ if(q.more){body+=`<details class="more"><summary>ほかの不安への答えも見る</summary>${q.opts.filter((_,k)=>k!==j).map(x=>`<div class="ans-card" style="margin-top:8px"><div class="ans-kicker">${x.t}</div><h3>${x.h}</h3>${x.b}</div>`).join("")}</details>`}
+ s.querySelector(".ans-slot").innerHTML=`<div class="ans"><div class="ans-card"><div class="ans-kicker">「${o.t}」と回答した方へ</div><h3>${o.h}</h3>${body}</div></div>`;
+ track(first?"answer":"answer_change",{q:q.id});
+ if(first){done++;update();
+  setTimeout(()=>{ if(i+1<Q.length){render(i+1)} else showResult(); scrollToEl(s.querySelector(".ans")) },300);
+ } else if(resultEl){fillResult()}
+}
+function update(){
+ document.getElementById("pBar").style.width=(done/Q.length*100)+"%";
+ document.getElementById("pLabel").textContent=done<Q.length?`Q${done+1} / ${Q.length}`:"回答完了";
+ const b=document.getElementById("stickyBtn");
+ if(done<Q.length){b.textContent=`アンケートに答える（残り${Q.length-done}問）`;b.href="#"+Q[done].id}
+}
+function fillResult(){
+ resultEl.querySelector(".summary").innerHTML=`<dt>気になっていること</dt><dd>${ans.q1}</dd><dt>不安なこと</dt><dd>${ans.q2}</dd><dt>お近くのエリア</dt><dd>${ans.q3}</dd><dt>治療を考えている時期</dt><dd>${ans.q4}</dd>`;
+}
+function showResult(){
+ const r=document.createElement("section");r.className="result";r.id="result";resultEl=r;
+ r.innerHTML=`<p class="thanks">アンケートへのご回答<br>ありがとうございました</p>
+ <dl class="summary"></dl>
+ <div class="offer"><div class="offer-head">回答いただいた方へ｜料金のご案内</div>
+  <div class="offer-body"><p class="menu">包茎治療 スタンダードカット<small>余分な包皮を切除し縫合する基本の術式</small></p>
+   <div class="price"><s>99,000円</s><span>→</span><strong>45,000<small>円（税込）</small></strong></div>
+   <p class="price-cond">当日治療の場合のキャンペーン価格</p>
+   <div class="plus">${SHOW_GLANS?`<div class="glans"><b>＋</b><span>キャンペーン期間中は<b>亀頭増大（タイプH1・1cc）が無料</b><br><small>通常33,000円（税込）※適用条件【要確認】</small></span></div>`:""}<div><b>＋</b><span>初診料・診察料・麻酔代・内服薬代・アフターケア込み</span></div><div><b>＋</b><span>医療ローンなら<b>月々3,000円〜</b><br><small>※スタンダードカット（15回払い）の場合</small></span></div></div>
+   <p class="cond">※キャンペーン価格は当日治療の場合のみ適用。当日以外の場合は99,000円（税込）。ご予約の際に「キャンペーンを見た」とお伝えください。※術後の痛みに対する麻酔は別途費用。※真性・カントン包茎は保険診療の対象となる場合があります。※キャンペーン期間【要ご支給】</p>
+  </div></div>
+ <a class="cta" href="${LP}" onclick="track('cta_click',{pos:'result'})">料金・治療内容を公式サイトで確認<small>無料カウンセリングのご予約もこちらから</small></a>
+ <p class="reassure">カウンセリングは無料です。</p>`;
+ flow.appendChild(r);fillResult();
+ const st=document.getElementById("sticky");st.classList.add("done");const b=document.getElementById("stickyBtn");b.textContent="料金・治療内容を公式サイトで確認";b.href=LP;b.onclick=()=>track("cta_click",{pos:"sticky"});
+ track("complete",{});
+}
+function scrollToEl(el){const y=el.getBoundingClientRect().top+scrollY-56;scrollTo({top:y,behavior:"smooth"})}
+function track(ev,d){(window.dataLayer=window.dataLayer||[]).push({event:"survey_"+ev,...d})}
+const sticky=document.getElementById("sticky"),fvEl=document.getElementById("fv");
+new IntersectionObserver(e=>sticky.classList.toggle("show",!e[0].isIntersecting)).observe(fvEl);
+document.getElementById("startBtn").onclick=e=>{e.preventDefault();scrollToEl(document.getElementById("q1"));track("start",{})};
+if(!SHOW_GLANS)document.getElementById("glansLegal").remove();
+render(0);update();
+</script>
+</body>
+</html>
