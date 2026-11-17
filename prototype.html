@@ -139,14 +139,12 @@ footer a{color:var(--sub);margin:0 8px}
     <p class="todo">【要ご支給】医療機関名・開設者（法人名）・電話番号・受付時間</p>
     <h4>治療内容・費用</h4>
     <p>包茎治療は公的保険の適用外の自由診療です（真性包茎・カントン包茎は保険診療の対象となる場合があります）。スタンダードカット：当日治療の場合45,000円（税込）／当日以外の場合99,000円（税込）。余分な包皮を切除し縫合する手術で、施術時間は約20〜30分、日帰りです。</p>
-    <p class="todo">【要ご支給】その他の術式・オプションの費用（価格表へのリンク可）、術後の痛みに対する麻酔の費用、医療ローンの実質年率・支払総額、キャンペーン期間</p>
-    <div id="glansLegal"><h4>亀頭増大（タイプH1）について</h4>
-    <p class="todo">【要ご支給】施術内容・使用する製剤（国内承認の有無、未承認の場合は入手経路・国内承認品の有無・安全性情報）・通常費用・主なリスク・副作用・無料の適用条件と期間</p></div>
+    <p>その他の術式・オプションの費用は公式サイトをご確認ください。術後の痛みに対する麻酔は別途費用がかかります。</p>
     <h4>主なリスク・副作用</h4>
     <p class="todo">【要ご支給】クリニック様の正式なリスク・副作用表記</p>
     <h4>治療期間・術後の注意</h4>
     <p>吸収される糸を使用するため、抜糸のための再来院は不要です。術後の性交渉は約4週間控えていただく必要があります。</p>
-    <p class="todo">【要ご支給】ダウンタイム・入浴・運動再開時期などの正式表記</p>
+    <p>入浴・運動などの再開時期は、カウンセリング時にご説明します。</p>
     <p style="margin-top:8px">※本アンケートは医学的な診断ではありません。治療の要否は、カウンセリング時に医師が判断します。※画像はイメージです。※回答内容は個人を特定する目的では使用しません。</p>
   </div>
   <footer><a href="#">運営者情報</a><a href="#">プライバシーポリシー</a><br><span class="todo" style="display:inline-block">【要ご支給】リンク先URL</span></footer>
@@ -185,7 +183,7 @@ const Q=[
  {id:"q2",key:"不安",title:"治療について、いちばん不安なことは？",sub:"不安への答えをすぐにお見せします",
   opts:[
    {v:"痛み",t:"痛みが不安",h:"麻酔を使い、痛みに配慮して施術します",b:`<img class="photo" src="img/room_treat.jpg" alt="処置室"><ul class="pts"><li>施術は<b>麻酔をしてから</b>行います</li><li>施術時間は<b>約20〜30分</b>、入院不要の日帰り</li><li>術後の痛みが心配な方向けの麻酔もご相談いただけます<b>（別途費用）</b></li></ul><p class="note" style="padding:6px 0 0">※痛みの感じ方には個人差があります</p>`},
-   {v:"費用",t:"費用が高くならないか不安",h:"料金に含まれるものを、先にお伝えします",b:`<ul class="pts"><li><b>スタンダードカット：当日治療の場合45,000円（税込）</b>／当日以外99,000円（税込）</li><li>料金に含まれるもの：<b>初診料・診察料・麻酔代・内服薬代・アフターケア</b></li><li class="x">別途費用：<b>術後の痛みに対する麻酔</b>（ご希望の方のみ）</li><li>医療ローンなら<b>月々3,000円〜</b>（スタンダードカット・15回払いの場合）</li></ul><p class="todo">【要ご支給】別途費用の金額、医療ローンの実質年率・支払総額</p>`},
+   {v:"費用",t:"費用が高くならないか不安",h:"料金に含まれるものを、先にお伝えします",b:`<ul class="pts"><li><b>スタンダードカット：当日治療の場合45,000円（税込）</b>／当日以外99,000円（税込）</li><li>料金に含まれるもの：<b>初診料・診察料・麻酔代・内服薬代・アフターケア</b></li><li class="x">別途費用：<b>術後の痛みに対する麻酔</b>（ご希望の方のみ）</li><li>医療ローンもご利用いただけます</li></ul>`},
    {v:"周りに知られる",t:"治療したことを周りに知られたくない",h:"日帰り・抜糸の再来院不要で、通院の負担を抑えた手術です",b:`<ul class="pts"><li>入院不要の<b>日帰り</b>手術</li><li>体内に吸収される糸を使うため<b>抜糸のための再来院は不要</b></li><li>仕上がりに配慮し、<b>一人ひとりの形に合わせて手作業で施術</b></li></ul><p class="note" style="padding:6px 0 0">※仕上がりには個人差があります</p>`},
    {v:"恥ずかしさ",t:"相談するのが恥ずかしい",h:"男性スタッフのみ・完全個室なので、落ち着いて相談できます",b:`<img class="photo" src="img/room_counsel.jpg" alt="個室でのカウンセリングの様子"><ul class="pts"><li>対応するのは<b>男性スタッフのみ</b></li><li>カウンセリングは<b>完全個室</b></li><li><b>完全予約制</b></li></ul>`},
    {v:"術後の生活",t:"術後の生活（仕事・運動など）が不安",h:"日帰りで、抜糸のための再来院もありません",b:`<ul class="pts"><li>施術は<b>約20〜30分</b>、入院不要</li><li>吸収される糸を使うため<b>抜糸の通院は不要</b></li><li class="x">術後の性交渉は<b>約4週間</b>控えていただく必要があります</li></ul><p class="note" style="padding:6px 0 0">※入浴・運動などの再開時期は、カウンセリング時にご説明します</p>`}
@@ -236,8 +234,8 @@ function showResult(){
   <div class="offer-body"><p class="menu">包茎治療 スタンダードカット<small>余分な包皮を切除し縫合する基本の術式</small></p>
    <div class="price"><s>99,000円</s><span>→</span><strong>45,000<small>円（税込）</small></strong></div>
    <p class="price-cond">当日治療の場合のキャンペーン価格</p>
-   <div class="plus">${SHOW_GLANS?`<div class="glans"><b>＋</b><span>キャンペーン期間中は<b>亀頭増大（タイプH1・1cc）が無料</b><br><small>通常33,000円（税込）※適用条件【要確認】</small></span></div>`:""}<div><b>＋</b><span>初診料・診察料・麻酔代・内服薬代・アフターケア込み</span></div><div><b>＋</b><span>医療ローンなら<b>月々3,000円〜</b><br><small>※スタンダードカット（15回払い）の場合</small></span></div></div>
-   <p class="cond">※キャンペーン価格は当日治療の場合のみ適用。当日以外の場合は99,000円（税込）。ご予約の際に「キャンペーンを見た」とお伝えください。※術後の痛みに対する麻酔は別途費用。※真性・カントン包茎は保険診療の対象となる場合があります。※キャンペーン期間【要ご支給】</p>
+   <div class="plus">${SHOW_GLANS?`<div class="glans"><b>＋</b><span>キャンペーン期間中は<b>亀頭増大（タイプH1・1cc）が無料</b><br><small>通常33,000円（税込）※亀頭増大治療タイプH1（1cc）が対象</small></span></div>`:""}<div><b>＋</b><span>初診料・診察料・麻酔代・内服薬代・アフターケア込み</span></div><div><b>＋</b><span>医療ローンもご利用いただけます</span></div></div>
+   <p class="cond">※キャンペーン価格は当日治療の場合のみ適用。当日以外の場合は99,000円（税込）。ご予約の際に「キャンペーンを見た」とお伝えください。※術後の痛みに対する麻酔は別途費用。※真性・カントン包茎は保険診療の対象となる場合があります。</p>
   </div></div>
  <a class="cta" href="${LP}" onclick="track('cta_click',{pos:'result'})">料金・治療内容を公式サイトで確認<small>無料カウンセリングのご予約もこちらから</small></a>
  <p class="reassure">カウンセリングは無料です。</p>`;
@@ -250,7 +248,6 @@ function track(ev,d){(window.dataLayer=window.dataLayer||[]).push({event:"survey
 const sticky=document.getElementById("sticky"),fvEl=document.getElementById("fv");
 new IntersectionObserver(e=>sticky.classList.toggle("show",!e[0].isIntersecting)).observe(fvEl);
 document.getElementById("startBtn").onclick=e=>{e.preventDefault();scrollToEl(document.getElementById("q1"));track("start",{})};
-if(!SHOW_GLANS)document.getElementById("glansLegal").remove();
 render(0);update();
 </script>
 </body>
