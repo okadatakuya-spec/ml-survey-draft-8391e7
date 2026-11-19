@@ -88,6 +88,11 @@ body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#e9ebf2;l
 .offer-body{padding:14px;text-align:center}
 .menu{font-size:14px;font-weight:700;color:var(--navy)}
 .menu small{display:block;font-weight:500;color:var(--sub);font-size:11.5px}
+.off{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 2px}
+.off-badge{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#d4b04c,#a8801c);color:#fff;font-weight:900;font-size:13px;line-height:1.05;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);flex-shrink:0}
+.off-badge b{font-size:26px}
+.off p{text-align:left;font-weight:700;color:var(--navy);font-size:14px;line-height:1.35;margin:0}
+.off p b{color:var(--pink2);font-size:22px}
 .price{display:flex;align-items:baseline;justify-content:center;gap:6px;margin:6px 0 2px;flex-wrap:wrap}
 .price s{color:#888;font-size:15px;font-weight:700;white-space:nowrap}
 .price strong{font-size:38px;font-weight:900;color:var(--pink2);line-height:1.1;white-space:nowrap}
@@ -125,7 +130,7 @@ footer a{color:var(--sub);margin:0 8px}
     <div class="badges">
       <div class="badge">治療実績<b>14万件</b>以上※1</div>
       <div class="badge">相談は<b>完全個室</b></div>
-      <div class="badge">スタッフは<b>男性のみ</b></div>
+      <div class="badge">入院不要の<b>日帰り手術</b></div>
     </div>
     <p class="note">※1 治療実績145,791件（2010年7月1日〜2026年8月31日累計）　※自由診療</p>
     <div class="gift">アンケート回答で<br><span>特別キャンペーン価格</span>をご案内！<br>さらにお近くの院をご案内します</div>
@@ -234,6 +239,7 @@ function showResult(){
  <dl class="summary"></dl>
  <div class="offer"><div class="offer-head">回答いただいた方へ｜特別料金のご案内</div>
   <div class="offer-body"><p class="menu">包茎治療 スタンダードカット<small>余分な包皮を切除し縫合する基本の術式</small></p>
+   <div class="off"><span class="off-badge">約<b>55</b>%<br>OFF</span><p>当日治療なら<br><b>54,000円OFF</b></p></div>
    <div class="price"><s>99,000円</s><span>→</span><strong>45,000<small>円（税込）</small></strong></div>
    <p class="price-cond">当日治療の場合のキャンペーン価格</p>
    <div class="plus">${SHOW_GLANS?`<div class="glans"><b>＋</b><span>キャンペーン期間中は<b>亀頭増大（タイプH1・1cc）が無料</b><br><small>通常33,000円（税込）※亀頭増大治療タイプH1（1cc）が対象</small></span></div>`:""}<div><b>＋</b><span>初診料・診察料・麻酔代・内服薬代・アフターケア込み</span></div><div><b>＋</b><span>医療ローンもご利用いただけます</span></div></div>
